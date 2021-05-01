@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52183387263D2986007CF56D /* Displays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52183386263D2986007CF56D /* Displays.swift */; };
 		5231C6C1263CE2DF005AC3D7 /* OrbitPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231C6C0263CE2DF005AC3D7 /* OrbitPlayerApp.swift */; };
 		5231C6C3263CE2DF005AC3D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231C6C2263CE2DF005AC3D7 /* ContentView.swift */; };
 		5231C6C5263CE2DF005AC3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5231C6C4263CE2DF005AC3D7 /* Assets.xcassets */; };
 		5231C6C8263CE2DF005AC3D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5231C6C7263CE2DF005AC3D7 /* Preview Assets.xcassets */; };
 		5231C6D4263CE2E0005AC3D7 /* OrbitPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231C6D3263CE2E0005AC3D7 /* OrbitPlayerTests.swift */; };
 		5231C6DF263CE2E0005AC3D7 /* OrbitPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231C6DE263CE2E0005AC3D7 /* OrbitPlayerUITests.swift */; };
+		5231C6F0263CE36B005AC3D7 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231C6EF263CE36B005AC3D7 /* Track.swift */; };
+		5231C708263CE796005AC3D7 /* TrackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231C707263CE796005AC3D7 /* TrackRow.swift */; };
+		5231C70D263CE998005AC3D7 /* TrackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231C70C263CE998005AC3D7 /* TrackList.swift */; };
+		5231C712263CEAB1005AC3D7 /* LoadTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231C711263CEAB1005AC3D7 /* LoadTracks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52183386263D2986007CF56D /* Displays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displays.swift; sourceTree = "<group>"; };
 		5231C6BD263CE2DF005AC3D7 /* OrbitPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrbitPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5231C6C0263CE2DF005AC3D7 /* OrbitPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitPlayerApp.swift; sourceTree = "<group>"; };
 		5231C6C2263CE2DF005AC3D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +52,10 @@
 		5231C6DA263CE2E0005AC3D7 /* OrbitPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrbitPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5231C6DE263CE2E0005AC3D7 /* OrbitPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitPlayerUITests.swift; sourceTree = "<group>"; };
 		5231C6E0263CE2E0005AC3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5231C6EF263CE36B005AC3D7 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		5231C707263CE796005AC3D7 /* TrackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRow.swift; sourceTree = "<group>"; };
+		5231C70C263CE998005AC3D7 /* TrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackList.swift; sourceTree = "<group>"; };
+		5231C711263CEAB1005AC3D7 /* LoadTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadTracks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52183385263D297A007CF56D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				52183386263D2986007CF56D /* Displays.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		5231C6B4263CE2DF005AC3D7 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +114,9 @@
 		5231C6BF263CE2DF005AC3D7 /* OrbitPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				52183385263D297A007CF56D /* Helpers */,
+				5231C706263CE786005AC3D7 /* Views */,
+				5231C6F4263CE37B005AC3D7 /* Model */,
 				5231C6C0263CE2DF005AC3D7 /* OrbitPlayerApp.swift */,
 				5231C6C2263CE2DF005AC3D7 /* ContentView.swift */,
 				5231C6C4263CE2DF005AC3D7 /* Assets.xcassets */,
@@ -130,6 +151,24 @@
 				5231C6E0263CE2E0005AC3D7 /* Info.plist */,
 			);
 			path = OrbitPlayerUITests;
+			sourceTree = "<group>";
+		};
+		5231C6F4263CE37B005AC3D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5231C6EF263CE36B005AC3D7 /* Track.swift */,
+				5231C711263CEAB1005AC3D7 /* LoadTracks.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5231C706263CE786005AC3D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5231C707263CE796005AC3D7 /* TrackRow.swift */,
+				5231C70C263CE998005AC3D7 /* TrackList.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +300,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5231C708263CE796005AC3D7 /* TrackRow.swift in Sources */,
 				5231C6C3263CE2DF005AC3D7 /* ContentView.swift in Sources */,
+				5231C70D263CE998005AC3D7 /* TrackList.swift in Sources */,
+				5231C712263CEAB1005AC3D7 /* LoadTracks.swift in Sources */,
+				52183387263D2986007CF56D /* Displays.swift in Sources */,
 				5231C6C1263CE2DF005AC3D7 /* OrbitPlayerApp.swift in Sources */,
+				5231C6F0263CE36B005AC3D7 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

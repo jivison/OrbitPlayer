@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import AVFoundation
+
+var avPlayer = AVPlayer()
 
 struct ContentView: View {
+    var tracks: [Track]
+    
+    init() {
+        let tl = TrackLoader()
+        self.tracks = tl.loadTracks(atPath: "/Users/john/Music/WJSN - Unnatural")
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TrackList(tracks: tracks)
     }
 }
 

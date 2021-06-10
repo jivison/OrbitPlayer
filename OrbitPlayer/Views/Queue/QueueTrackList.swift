@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct TrackList: View {
+struct QueueTrackList: View {
     var tracks: [Track]
     
     var body: some View {
         List(tracks) { track in
-            TrackRow(track: track).onTapGesture(count: 2) {
+            QueueTrackRow(track: track).onTapGesture(count: 2) {
                 track.play()
             }
         }
@@ -24,6 +24,6 @@ struct TrackList_Previews: PreviewProvider {
         let tl = TrackLoader()
         let tracks = tl.loadTracks(atPath: "/Users/john/Dropbox/_Downloads/WJSN - Unnatural")
         
-        TrackList(tracks: tracks)
+        QueueTrackList(tracks: tracks)
     }
 }

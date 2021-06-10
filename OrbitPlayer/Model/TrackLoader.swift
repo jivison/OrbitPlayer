@@ -32,7 +32,3 @@ class TrackLoader {
         return items
     }
 }
-
-
-let tl = TrackLoader()
-let tracks = tl.loadTracks(atPath: "/Users/john/Dropbox/_Downloads/WJSN - Unnatural")

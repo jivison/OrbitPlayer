@@ -33,8 +33,7 @@ class Track: Identifiable {
     }
     
     public func play() {
-        avPlayer.replaceCurrentItem(with: self.playerItem)
-        avPlayer.play()
+        queue.play(self)
     }
     
     static func == (lhs: Track, rhs: Track) -> Bool {

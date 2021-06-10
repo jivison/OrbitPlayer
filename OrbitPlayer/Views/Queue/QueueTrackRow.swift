@@ -7,15 +7,13 @@
 
 import SwiftUI
 
-struct TrackRow: View {
+struct QueueTrackRow: View {
     var track: Track
     
     var body: some View {
         HStack {
             track.metadata.getArtwork()
-                .resizable()
-                .scaledToFit()
-                .frame(width: 35, height: 35)
+                .resizeKeepingAspectRatio(width: 35, height: 35)
                 .cornerRadius(3)
             
             VStack(alignment: .leading) {
@@ -40,6 +38,6 @@ struct TrackRow: View {
 
 struct TrackRow_Previews: PreviewProvider {
     static var previews: some View {
-        TrackRow(track: Track(path: URL(fileURLWithPath: "/Users/john/Music/WJSN - Unnatural/우주소녀-4-New Me.mp3")))
+        QueueTrackRow(track: Track(path: URL(fileURLWithPath: "/Users/john/Music/WJSN - Unnatural/우주소녀-4-New Me.mp3")))
     }
 }
